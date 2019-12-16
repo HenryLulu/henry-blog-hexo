@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>闪朵</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="闪朵">
+<meta property="og:url" content="http:&#x2F;&#x2F;blog.hong-yu.wang&#x2F;">
+<meta property="og:site_name" content="闪朵">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Henry Wang">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="前端工程师">
+<meta property="article:tag" content="前端博客">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="React">
+<meta property="article:tag" content="node.js">
+<meta property="article:tag" content="node">
+<meta property="article:tag" content="webpack">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="闪朵" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">闪朵</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.hong-yu.wang"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-第一篇hexo博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/%E7%AC%AC%E4%B8%80%E7%AF%87hexo%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2019-12-16T08:11:00.000Z" itemprop="datePublished">2019-12-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/%E7%AC%AC%E4%B8%80%E7%AF%87hexo%E5%8D%9A%E5%AE%A2/">第一篇hexo博客hhh</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0-综述"><a href="#0-综述" class="headerlink" title="0 综述"></a>0 综述</h2><h3 id="跨端的目的"><a href="#跨端的目的" class="headerlink" title="跨端的目的"></a>跨端的目的</h3><p>跨端，目的很明确，就是用一处代码开发，覆盖到 IOS、android、h5 的平台上，就能提高开发效率。如果这处开发对前端或者客户端开发人员学习成本低，就更好了。</p>
+<h3 id="跨端要实现的主要能力"><a href="#跨端要实现的主要能力" class="headerlink" title="跨端要实现的主要能力"></a>跨端要实现的主要能力</h3><ol>
+<li>如何把跨端代码变成各端上的界面</li>
+<li>如何响应界面上的交互</li>
+<li>如何使跨端代码调用端的能力<h3 id="跨端要面临的主要问题"><a href="#跨端要面临的主要问题" class="headerlink" title="跨端要面临的主要问题"></a>跨端要面临的主要问题</h3></li>
+<li>界面性能</li>
+<li>开发效率、上手难度</li>
+<li>动态化，即不发版能否动态更改界面内容（对IOS尤为重要）<h3 id="三波主流方案"><a href="#三波主流方案" class="headerlink" title="三波主流方案"></a>三波主流方案</h3>历史的长河中，跨端经历了三波主流的方案。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>技术类型</th>
+<th>渲染方式</th>
+<th>性能</th>
+<th>开发效率</th>
+<th>动态化</th>
+<th>框架代表</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hybrid</td>
+<td>webview</td>
+<td>差</td>
+<td>高</td>
+<td>好</td>
+<td>Ionic</td>
+</tr>
+<tr>
+<td>js+原生渲染</td>
+<td>原生控件</td>
+<td>较好</td>
+<td>高</td>
+<td>好</td>
+<td>React-natice、Weex</td>
+</tr>
+<tr>
+<td>自绘UI</td>
+<td>系统API</td>
+<td>好</td>
+<td>一般</td>
+<td>差</td>
+<td>Flutter</td>
+</tr>
+</tbody></table>
+<h2 id="1-混合应用"><a href="#1-混合应用" class="headerlink" title="1 混合应用"></a>1 混合应用</h2><p>在早期，对于交互要求不高的类似活动页这种需求，通常采用Hybrid开发。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><img src="http://static.chiyuanyuan.com/63DF3F92-639D-4558-9D37-B6D4E00CF8EB.png" alt="image"><br>客户端提供一个类似浏览器的webview壳子，直接获取线上的h5页面展示。通过客户端提供的api进行交互和端能力调用。</p>
+<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><ul>
+<li>动态化，只要改了资源地址的web页面内容，就等于改了跨端页面</li>
+<li>开发成本特别低<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3></li>
+<li>性能不好</li>
+<li>原生能力有限<br>本质上，混合应用算不上跨端方案。</li>
+</ul>
+<h2 id="2-真正的跨端"><a href="#2-真正的跨端" class="headerlink" title="2 真正的跨端"></a>2 真正的跨端</h2><p>回到跨端的目的，什么是真正的跨端呢？就是一套代码，在不同平台下真正落地成了平台的原生控件。这就是 js+原生渲染 提供的能力。</p>
+<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p><img src="http://static.chiyuanyuan.com/7469CE08-7F7B-4AFD-A5F1-3E6C0B9B0D26.png" alt="image"></p>
+<ul>
+<li>跨端代码通过工具打包成js后，发布到服务器上</li>
+<li>原生端上去拉，提供js环境跑起来，包上框架，调用bridge绘制UI、进行页面交互<h3 id="跨端代码"><a href="#跨端代码" class="headerlink" title="跨端代码"></a>跨端代码</h3>适逢这套方案发家时，也是MVVM最蓬勃发展的阶段，因此前端产生了五花八门的模式，比如以RN为代表的React风格和以Weex为代表的Vue风格。以RN为例，基于React的设计理念，前端程序员可以无差别的用React写跨端代码部分。<br>但不论写法如何，最终产生的都是一个js文件，这个文件里包含了所有UI组件声明、事件监听、原生能力调用等等。<h3 id="端上提供的能力"><a href="#端上提供的能力" class="headerlink" title="端上提供的能力"></a>端上提供的能力</h3><h4 id="js执行环境"><a href="#js执行环境" class="headerlink" title="js执行环境"></a>js执行环境</h4>首先，得让js跑起来<h4 id="framework"><a href="#framework" class="headerlink" title="framework"></a>framework</h4>然而仅仅写出React是不够的，我们需要框架把它跑起来。在web开发中，React框架往往是和React代码一起打包成js，再放到浏览器里执行的。<br>但相比于我们动不了的浏览器，在跨端方案中，我们有能力也必须在端上做些动作。既然如此，为了让js包更轻量也更稳定，索性就把框架层放到端的 JS Core 中。<br>这层框架和web中的react没有本质区别，都是根据react代码，创建虚拟DOM，管理生命周期，做diff，最终在必要的时候 patch 出节点操作命令。<h4 id="bridge"><a href="#bridge" class="headerlink" title="bridge"></a>bridge</h4>从framework下来，至少有三件事需要和端交流：</li>
+<li>从 js patch 到端的控件操作命令（增删改），这是落地到原生控件的基础</li>
+<li>端上原生控件触发事件，需要向 js 通知</li>
+<li>js 需要调用端上的能力</li>
+</ul>
+<p>这个工作则需要 bridge 来做。</p>
+<h3 id="优势-1"><a href="#优势-1" class="headerlink" title="优势"></a>优势</h3><ul>
+<li>既能享受原生控件的性能</li>
+<li>又能享受动态化的发布</li>
+</ul>
+<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>毕竟还有一层 JS Core，性能还是和原生有差距</li>
+<li>bridge需要持续维护，也不能做到完美</li>
+</ul>
+<h2 id="3-更下一层"><a href="#3-更下一层" class="headerlink" title="3 更下一层"></a>3 更下一层</h2><p>我们此前大费周章的写跨端代码，再包起来，还需要在各平台建立抹平的SDK，只为了把跨端代码转成原生控件。<br>后来，Flutter出来了，他说，我们不用原生控件了，直接自己画UI吧。</p>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p><img src="http://static.chiyuanyuan.com/63216C7F-D126-4E3F-97AC-CB7234D54FAD.png" alt=""><br>Flutter完全抛弃了转原生控件再渲染的思路，直接建立了一套自己的体系。</p>
+<h4 id="Engine"><a href="#Engine" class="headerlink" title="Engine"></a>Engine</h4><p>直接对接平台UI绘制能力，在系统api层抹平了 IOS、android 的平台差异。</p>
+<h4 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h4><p>对标原生控件，建立层次分明的健全控件体系</p>
+<h3 id="优势-2"><a href="#优势-2" class="headerlink" title="优势"></a>优势</h3><ul>
+<li>性能：彻底抛弃了中间的各种繁琐层，性能对标原生</li>
+<li>Dart语言，提供统一的开发标准</li>
+</ul>
+<h3 id="问题-2"><a href="#问题-2" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>动态化：编译到AOT以后，很难做，难道要回到 webview 阶段？</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.hong-yu.wang/%E7%AC%AC%E4%B8%80%E7%AF%87hexo%E5%8D%9A%E5%AE%A2/" data-id="ck48900m50000hks6ejmv1g4z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-init" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/init/" class="article-date">
+  <time datetime="2019-12-16T08:02:31.000Z" itemprop="datePublished">2019-12-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/init/">init</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.hong-yu.wang/init/" data-id="ck48900me0001hks6dx8r5r2w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hello-world/" class="article-date">
+  <time datetime="2019-12-16T07:32:48.614Z" itemprop="datePublished">2019-12-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.hong-yu.wang/hello-world/" data-id="ck48900mi0003hks6ctkc1mlh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">学习</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/%E7%AC%AC%E4%B8%80%E7%AF%87hexo%E5%8D%9A%E5%AE%A2/">第一篇hexo博客hhh</a>
+          </li>
+        
+          <li>
+            <a href="/init/">init</a>
+          </li>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Henry Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
