@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 闪朵
+title: 朵朵闪闪
 subtitle: ''
 description: ''
 keywords: 前端,前端工程师,前端博客,CSS,React,node.js,node,webpack,python
@@ -98,4 +98,11 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+- type: git
+  repo: https://github.com/HenryLulu/henrylulu.github.io
+- type: rsync
+  host: 106.12.69.168
+  user: root
+  root: /root/henry-site/henry-site-blog-hexo/
+  port: 22
+  delete: false
