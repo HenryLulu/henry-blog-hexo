@@ -1,0 +1,218 @@
+.nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 11.12%;
+  height: 100vh;
+  box-sizing: border-box;
+  vertical-align: middle;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+@media mq-col-6 {
+  .nav {
+    width: 16.6vw;
+  }
+}
+@media mq-mobile {
+  .nav {
+    display: none;
+  }
+}
+.nav .bg {
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  left: -30px;
+  width: 70%;
+  padding-bottom: 70%;
+  background: url("http://static.chiyuanyuan.com/logo_gold.svg") no-repeat center center;
+  background-size: 70% auto;
+  transform: rotate(30deg);
+  opacity: 0.8;
+}
+.nav .nav-title {
+  flex-shrink: 0;
+  padding: 40px 12% 10px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: color-black;
+  text-align: center;
+}
+.nav .nav-links {
+  flex-shrink: 1;
+  padding: 0 12%;
+}
+.nav .nav-links .nav-link {
+  display: inline-block;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 4px;
+  font-size: 15px;
+}
+.nav .nav-links .nav-link.bold {
+  font-weight: 700;
+}
+.nav .nav-links .nav-link .nav-link-number {
+  position: absolute;
+  font-size: 0.7em;
+  top: 30%;
+  right: -12px;
+  width: 10px;
+  text-align: left;
+}
+.nav .nav-links .nav-link:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: color-black;
+  min-width: 0;
+  transition: min-width 0.3s;
+}
+.nav .nav-links .nav-link:hover:before {
+  min-width: 100%;
+}
+.nav .leave-btn {
+  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  color: color-black;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 19.5px 0;
+  font-size: 15px;
+  position: relative;
+}
+.nav .leave-btn:before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: color-gold;
+  opacity: 0.8;
+}
+.nav .leave-btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: color-gold;
+  min-width: 100%;
+  transition: min-width 0.5s;
+}
+.nav .leave-btn:hover:after {
+  min-width: 0;
+}
+.nav-mobile {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+@media mq-mobile {
+  .nav-mobile {
+    display: block;
+  }
+}
+.nav-mobile .top-bar {
+  height: 70px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.nav-mobile .top-bar .logo {
+  display: block;
+  width: 70px;
+  background: url("http://static.chiyuanyuan.com/logo_gold.svg") no-repeat center center;
+  background-size: 60% auto;
+  background-color: color-gold;
+}
+.nav-mobile .top-bar .btns {
+  height: 100%;
+}
+.nav-mobile .top-bar .btns .btn {
+  position: relative;
+  z-index: 11;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 12px;
+  color: color-black;
+  transition: color 0.5s;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.nav-mobile .top-bar .btns .btn:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 0;
+  background: color-black;
+  transition: min-height 0.5s;
+}
+.nav-mobile .top-bar .btns .btn.active {
+  color: #fff;
+}
+.nav-mobile .top-bar .btns .btn.active:before {
+  min-height: 100%;
+}
+.nav-mobile .list {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  transition: background-color 0.5s;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-mobile .list .list-main {
+  flex-grow: 1;
+  margin-left: 70px;
+  height: 100%;
+  max-width: 0;
+  background: color-black;
+  transition: max-width 0.5s;
+  box-sizing: border-box;
+  padding: 15% 10%;
+}
+.nav-mobile .list .list-main li {
+  font-weight: 700;
+}
+.nav-mobile .list .list-main li .link {
+  color: color-gold;
+  display: inline-block;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 4px;
+  font-weight: 700;
+  border-bottom: 2px solid color-gold;
+}
+.nav-mobile .list.active {
+  height: auto;
+  bottom: 0;
+  background: rgba(37,37,37,0.5);
+}
+.nav-mobile .list.active .list-main {
+  max-width: 100%;
+}

@@ -130,7 +130,7 @@
   </header>
   <section class="list">
     
-      <article class="item current">
+      <article class="item ">
         <a href="/第一篇hexo博客/">
           <p class="item-info">2019-12-16 16:11</p>
           <p class="item-title">跨端方案概述</p>
@@ -158,7 +158,7 @@
         </a>
       </article>
     
-      <article class="item ">
+      <article class="item current">
         <a href="/第一篇hexo博客 copy 4/">
           <p class="item-info">2019-12-16 16:11</p>
           <p class="item-title">跨端方案概述</p>
@@ -204,14 +204,11 @@
 <h3 id="跨端要实现的主要能力"><a href="#跨端要实现的主要能力" class="headerlink" title="跨端要实现的主要能力"></a>跨端要实现的主要能力</h3><ol>
 <li>如何把跨端代码变成各端上的界面</li>
 <li>如何响应界面上的交互</li>
-<li>如何使跨端代码调用端的能力</li>
-</ol>
-<h3 id="跨端要面临的主要问题"><a href="#跨端要面临的主要问题" class="headerlink" title="跨端要面临的主要问题"></a>跨端要面临的主要问题</h3><ol>
+<li>如何使跨端代码调用端的能力<h3 id="跨端要面临的主要问题"><a href="#跨端要面临的主要问题" class="headerlink" title="跨端要面临的主要问题"></a>跨端要面临的主要问题</h3></li>
 <li>界面性能</li>
 <li>开发效率、上手难度</li>
-<li>动态化，即不发版能否动态更改界面内容（对IOS尤为重要）</li>
+<li>动态化，即不发版能否动态更改界面内容（对IOS尤为重要）<h3 id="三波主流方案"><a href="#三波主流方案" class="headerlink" title="三波主流方案"></a>三波主流方案</h3>历史的长河中，跨端经历了三波主流的方案。</li>
 </ol>
-<h3 id="三波主流方案"><a href="#三波主流方案" class="headerlink" title="三波主流方案"></a>三波主流方案</h3><p>历史的长河中，跨端经历了三波主流的方案。</p>
 <table>
 <thead>
 <tr>
@@ -252,9 +249,7 @@
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><img src="http://static.chiyuanyuan.com/63DF3F92-639D-4558-9D37-B6D4E00CF8EB.png" alt="image"><br>客户端提供一个类似浏览器的webview壳子，直接获取线上的h5页面展示。通过客户端提供的api进行交互和端能力调用。</p>
 <h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><ul>
 <li>动态化，只要改了资源地址的web页面内容，就等于改了跨端页面</li>
-<li>开发成本特别低</li>
-</ul>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>开发成本特别低<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3></li>
 <li>性能不好</li>
 <li>原生能力有限<br>本质上，混合应用算不上跨端方案。</li>
 </ul>
@@ -262,13 +257,7 @@
 <h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p><img src="http://static.chiyuanyuan.com/7469CE08-7F7B-4AFD-A5F1-3E6C0B9B0D26.png" alt="image"></p>
 <ul>
 <li>跨端代码通过工具打包成js后，发布到服务器上</li>
-<li>原生端上去拉，提供js环境跑起来，包上框架，调用bridge绘制UI、进行页面交互</li>
-</ul>
-<h3 id="跨端代码"><a href="#跨端代码" class="headerlink" title="跨端代码"></a>跨端代码</h3><p>适逢这套方案发家时，也是MVVM最蓬勃发展的阶段，因此前端产生了五花八门的模式，比如以RN为代表的React风格和以Weex为代表的Vue风格。以RN为例，基于React的设计理念，前端程序员可以无差别的用React写跨端代码部分。<br>但不论写法如何，最终产生的都是一个js文件，这个文件里包含了所有UI组件声明、事件监听、原生能力调用等等。</p>
-<h3 id="端上提供的能力"><a href="#端上提供的能力" class="headerlink" title="端上提供的能力"></a>端上提供的能力</h3><h4 id="js执行环境"><a href="#js执行环境" class="headerlink" title="js执行环境"></a>js执行环境</h4><p>首先，得让js跑起来</p>
-<h4 id="framework"><a href="#framework" class="headerlink" title="framework"></a>framework</h4><p>然而仅仅写出React是不够的，我们需要框架把它跑起来。在web开发中，React框架往往是和React代码一起打包成js，再放到浏览器里执行的。<br>但相比于我们动不了的浏览器，在跨端方案中，我们有能力也必须在端上做些动作。既然如此，为了让js包更轻量也更稳定，索性就把框架层放到端的 JS Core 中。<br>这层框架和web中的react没有本质区别，都是根据react代码，创建虚拟DOM，管理生命周期，做diff，最终在必要的时候 patch 出节点操作命令。</p>
-<h4 id="bridge"><a href="#bridge" class="headerlink" title="bridge"></a>bridge</h4><p>从framework下来，至少有三件事需要和端交流：</p>
-<ul>
+<li>原生端上去拉，提供js环境跑起来，包上框架，调用bridge绘制UI、进行页面交互<h3 id="跨端代码"><a href="#跨端代码" class="headerlink" title="跨端代码"></a>跨端代码</h3>适逢这套方案发家时，也是MVVM最蓬勃发展的阶段，因此前端产生了五花八门的模式，比如以RN为代表的React风格和以Weex为代表的Vue风格。以RN为例，基于React的设计理念，前端程序员可以无差别的用React写跨端代码部分。<br>但不论写法如何，最终产生的都是一个js文件，这个文件里包含了所有UI组件声明、事件监听、原生能力调用等等。<h3 id="端上提供的能力"><a href="#端上提供的能力" class="headerlink" title="端上提供的能力"></a>端上提供的能力</h3><h4 id="js执行环境"><a href="#js执行环境" class="headerlink" title="js执行环境"></a>js执行环境</h4>首先，得让js跑起来<h4 id="framework"><a href="#framework" class="headerlink" title="framework"></a>framework</h4>然而仅仅写出React是不够的，我们需要框架把它跑起来。在web开发中，React框架往往是和React代码一起打包成js，再放到浏览器里执行的。<br>但相比于我们动不了的浏览器，在跨端方案中，我们有能力也必须在端上做些动作。既然如此，为了让js包更轻量也更稳定，索性就把框架层放到端的 JS Core 中。<br>这层框架和web中的react没有本质区别，都是根据react代码，创建虚拟DOM，管理生命周期，做diff，最终在必要的时候 patch 出节点操作命令。<h4 id="bridge"><a href="#bridge" class="headerlink" title="bridge"></a>bridge</h4>从framework下来，至少有三件事需要和端交流：</li>
 <li>从 js patch 到端的控件操作命令（增删改），这是落地到原生控件的基础</li>
 <li>端上原生控件触发事件，需要向 js 通知</li>
 <li>js 需要调用端上的能力</li>
