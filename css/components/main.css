@@ -37,6 +37,17 @@
     display: none;
   }
 }
+.menu .header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("./img/logo.png") center center;
+  background-size: 50px;
+  opacity: 0.4;
+}
 .menu .header .title {
   color: color-gold;
   position: absolute;
@@ -105,7 +116,7 @@
   letter-spacing: 2px;
   color: #a6a6a6;
 }
-.article .title {
+.article >.title {
   font-size: 35px;
   color: color-black;
   margin-top: 50px;
@@ -121,20 +132,61 @@
 .article .main-content h3,
 .article .main-content h4,
 .article .main-content h5,
-.article .main-content h6 {
+.article .main-content h6,
+.article .main-content p,
+.article .main-content ol,
+.article .main-content ul,
+.article .main-content blockquote,
+.article .main-content figure,
+.article .main-content >table {
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+.article .main-content >table,
+.article .main-content img,
+.article .main-content figure {
+  box-shadow: 1px 1px 10px 2px #ddd;
+}
+.article .main-content h1,
+.article .main-content h2,
+.article .main-content h3,
+.article .main-content h4,
+.article .main-content h5,
+.article .main-content h6 {
   font-weight: bold;
+}
+.article .main-content h1 {
+  font-size: 42px;
+}
+.article .main-content h2 {
+  font-size: 27px;
+}
+.article .main-content h3 {
+  font-size: 22px;
+}
+.article .main-content h4,
+.article .main-content h5,
+.article .main-content h6 {
+  font-size: 18px;
 }
 .article .main-content p {
   font-size: 16px;
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  line-height: 1.5;
+}
+.article .main-content a {
+  color: color-gold;
+}
+.article .main-content strong {
+  font-weight: 700;
+}
+.article .main-content blockquote {
+  color: #999;
+  padding-left: 20px;
+  position: relative;
+  border-left: 4px solid color-gold;
 }
 .article .main-content img {
   position: relative;
@@ -144,45 +196,143 @@
   display: block;
   margin: 30px 0;
 }
-.article .main-content ul {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
+.article .main-content ol {
   list-style: none;
-  margin-top: 30px;
-  padding-left: 0;
+  counter-reset: b;
+}
+.article .main-content ol li {
+  margin-bottom: 10px;
+  padding-left: 27px;
+  position: relative;
+}
+.article .main-content ol li:before {
+  content: counters(b, ".") " ";
+  counter-increment: b;
+  left: -8px;
+  color: #999;
+  position: absolute;
+  text-align: right;
+  width: 29px;
+}
+.article .main-content ul {
+  list-style: none;
 }
 .article .main-content ul li {
-  margin: 5px 0;
-  padding-left: 20px;
+  margin-bottom: 10px;
+  padding-left: 27px;
   position: relative;
-  font-size: 16px;
-  list-style: none;
-  line-height: 1.7;
 }
 .article .main-content ul li:before {
-  height: 2px;
   content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
+  background-color: #999;
+  border-radius: 9999px;
   width: 6px;
-  background-color: #617294;
+  height: 6px;
+  left: 12px;
+  top: 11px;
+  position: absolute;
 }
-.article .main-content table {
+.article .main-content >table {
+  font-size: 16px;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-y: auto;
+  background: color-background;
   position: relative;
   z-index: 15;
-  background: #fff;
-  overflow: scroll;
-  border: 1px solid color-gray;
-  border-collapse: collapse;
 }
-.article .main-content table th,
-.article .main-content table td {
+.article .main-content >table th,
+.article .main-content >table td {
   text-align: left;
-  border: 1px solid color-gray;
-  padding: 5px;
+  padding: 10px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.article .main-content >figure {
+  position: relative;
+  z-index: 15;
+  margin: 0;
+  background: #f3f3f3;
+}
+.article .main-content >figure table {
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+.article .main-content >figure .code pre {
+  font-size: 14px;
+  padding: 30px;
+}
+.article .main-content >figure .code pre code {
+  white-space: pre;
+  font-size: 14px;
+  padding: 0;
+  font-weight: 300;
+  -webkit-font-smoothing: initial;
+  position: relative;
+  background: transparent;
+}
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #383a42;
+  background: #fafafa;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+.hljs-literal {
+  color: #0184bb;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #50a14f;
+}
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-link {
+  text-decoration: underline;
 }
