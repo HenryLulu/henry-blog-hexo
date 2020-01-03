@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 朵朵闪闪
+title: HEY!HENRY
 subtitle: ''
 description: ''
 keywords: 前端,前端工程师,前端博客,CSS,React,node.js,node,webpack,python
@@ -46,11 +46,11 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: true
   tab_replace: ''
   wrap: true
-  hljs: false
+  hljs: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: hexo-theme-henry
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
